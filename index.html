@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#087443">
+  <title>CASHPOINT NG — Complete Tasks. Earn Rewards.</title>
+  <meta name="description" content="CASHPOINT NG connects members with genuine sponsored tasks and business promotions.">
+  <style>
+    :root{--green:#087443;--dark:#064b2e;--mint:#eaf7ef;--ink:#17251d;--muted:#66736b;--line:#e4ebe6;--white:#fff}
+    *{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#f6faf7;line-height:1.5}
+    header{background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+    .nav{max-width:1100px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{font-size:21px;font-weight:900;color:var(--green);letter-spacing:.3px}.brand span{color:#18251d}
+    button{border:0;border-radius:10px;padding:12px 17px;font-weight:700;cursor:pointer}
+    .primary{background:var(--green);color:white}.secondary{background:var(--mint);color:var(--dark)}
+    .hero{max-width:1100px;margin:38px auto;padding:25px 20px;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+    h1{font-size:clamp(34px,5vw,54px);line-height:1.08;margin:0 0 16px}.hero p{font-size:18px;color:var(--muted);max-width:610px}
+    .hero-card,.card{background:white;border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 8px 30px #12351c0a}
+    .hero-card{background:linear-gradient(145deg,#087443,#07532f);color:white}.hero-card p{color:#e3f4e9;font-size:15px}
+    .hero-card .big{font-size:30px;font-weight:900;margin:10px 0}
+    .section{max-width:1100px;margin:24px auto;padding:0 20px 35px}.section h2{font-size:27px;margin-bottom:8px}
+    .muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}
+    .feature{background:white;border:1px solid var(--line);border-radius:15px;padding:18px}.icon{font-size:27px}
+    .feature h3{margin:8px 0 5px;font-size:17px}.feature p{font-size:14px;color:var(--muted);margin:0}
+    .notice{background:#fff8e7;border:1px solid #f1dfaa;color:#71520b;padding:14px 16px;border-radius:12px;font-size:14px;margin-top:18px}
+    footer{text-align:center;padding:28px 15px;background:#10271a;color:#d8e7dc;font-size:13px}
+    .modal-backdrop{display:none;position:fixed;inset:0;background:#07180f99;z-index:10;padding:18px;align-items:center;justify-content:center}
+    .modal{width:min(440px,100%);background:white;border-radius:18px;padding:24px;max-height:90vh;overflow:auto}
+    .modal h2{margin:0 0 6px}.close{float:right;background:#f0f4f1;padding:7px 11px}
+    label{display:block;font-size:14px;font-weight:700;margin:13px 0 5px}
+    input{width:100%;padding:13px;border:1px solid #ccd8d0;border-radius:9px;font:inherit}
+    .form-button{width:100%;margin-top:18px}.switch{color:var(--green);font-weight:700;cursor:pointer}
+    .demo-note{font-size:12px;color:#7b5a14;background:#fff8e7;padding:10px;border-radius:9px;margin-top:12px}
+    @media(max-width:760px){.hero{grid-template-columns:1fr;margin:18px auto}.grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:420px){.grid{grid-template-columns:1fr}.nav{padding:12px}.brand{font-size:18px}}
+  </style>
+</head>
+<body>
+<header><nav class="nav"><div class="brand">CASHPOINT <span>NG</span></div><div><button class="secondary" onclick="openModal('login')">Log in</button> <button class="primary" onclick="openModal('signup')">Join free</button></div></nav></header>
+<main>
+  <section class="hero">
+    <div>
+      <p style="color:var(--green);font-weight:800;letter-spacing:1px;text-transform:uppercase">A task and rewards community</p>
+      <h1>Complete tasks.<br><span style="color:var(--green)">Earn rewards.</span></h1>
+      <p>CASHPOINT NG connects members with genuine sponsored tasks, surveys, promotions and referral opportunities.</p>
+      <button class="primary" onclick="openModal('signup')">Create a free account</button>
+      <button class="secondary" onclick="document.getElementById('how').scrollIntoView({behavior:'smooth'})">How it works</button>
+      <div class="notice"><strong>Important:</strong> Joining is free. Rewards are only available for verified tasks funded by real advertisers or partners. Earnings are not guaranteed.</div>
+    </div>
+    <div class="hero-card">
+      <div style="font-size:14px;font-weight:700;opacity:.9">CASHPOINT NG</div>
+      <div class="big">Opportunities that count.</div>
+      <p>Find available campaigns, follow the instructions and submit proof where required. Approved rewards will be recorded transparently.</p>
+      <div style="border-top:1px solid #ffffff55;padding-top:14px;font-size:13px">No joining deposit • Clear task rules • Review before reward</div>
+    </div>
+  </section>
+  <section class="section" id="how">
+    <h2>Ways to participate</h2><p class="muted">Task availability depends on active, legitimate partners and campaigns.</p>
+    <div class="grid">
+      <article class="feature"><div class="icon">▶️</div><h3>Sponsored videos</h3><p>View promotional content only when a sponsor has funded a campaign.</p></article>
+      <article class="feature"><div class="icon">📝</div><h3>Surveys</h3><p>Take eligible surveys from reputable research providers.</p></article>
+      <article class="feature"><div class="icon">📣</div><h3>Business promotions</h3><p>Participate in approved campaigns with clear instructions.</p></article>
+      <article class="feature"><div class="icon">🤝</div><h3>Referrals</h3><p>Invite people. Referral rewards apply only under published campaign terms.</p></article>
+    </div>
+  </section>
+  <section class="section">
+    <div class="card"><h2>How it works</h2><ol><li>Create an account when registration is connected.</li><li>Choose an available campaign and read its rules.</li><li>Complete the task honestly and submit required proof.</li><li>Wait for review. Approved rewards appear in your account history.</li></ol><p class="muted">Withdrawals will be enabled only after identity, payment, fraud-prevention and funding checks are in place.</p></div>
+  </section>
+</main>
+<footer>© <span id="year"></span> CASHPOINT NG. All rights reserved. <br>Contact: support details will be added before launch.</footer>
+
+<div class="modal-backdrop" id="backdrop" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <button class="close" onclick="closeModal()">✕</button>
+    <h2 id="formTitle">Create your account</h2><p class="muted" id="formSubtitle">Registration will be connected securely in the next setup step.</p>
+    <form onsubmit="event.preventDefault();alert('This is the design preview. Account creation is not active yet. We will connect secure Supabase authentication next.');">
+      <div id="nameField"><label for="fullName">Full name</label><input id="fullName" placeholder="Enter your full name" autocomplete="name"></div>
+      <label for="email">Email address</label><input id="email" type="email" placeholder="you@example.com" required autocomplete="email">
+      <label for="password">Password</label><input id="password" type="password" placeholder="At least 8 characters" minlength="8" required autocomplete="current-password">
+      <button class="primary form-button" id="submitText" type="submit">Continue</button>
+    </form>
+    <p class="muted" style="font-size:14px" id="switchLine">Already registered? <span class="switch" onclick="openModal('login')">Log in</span></p>
+    <div class="demo-note">Preview only: this form does not save accounts or collect payments yet. Never enter a real password here.</div>
+  </div>
+</div>
+<script>
+  document.getElementById('year').textContent=new Date().getFullYear();
+  function openModal(mode){
+    document.getElementById('backdrop').style.display='flex';
+    const signup=mode==='signup';
+    document.getElementById('formTitle').textContent=signup?'Create your account':'Welcome back';
+    document.getElementById('formSubtitle').textContent=signup?'Join CASHPOINT NG for free.':'Login will be activated after secure authentication setup.';
+    document.getElementById('nameField').style.display=signup?'block':'none';
+    document.getElementById('submitText').textContent=signup?'Create account':'Log in';
+    document.getElementById('switchLine').innerHTML=signup?'Already registered? <span class="switch" onclick="openModal(\\'login\\')">Log in</span>':'New to CASHPOINT NG? <span class="switch" onclick="openModal(\\'signup\\')">Join free</span>';
+  }
+  function closeModal(){document.getElementById('backdrop').style.display='none'}
+</script>
+</body></html>
